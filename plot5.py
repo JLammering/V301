@@ -8,4 +8,4 @@ b = x
 x = y/x
 y = b*y
 plt.plot(x, y, 'k.')
-plt.savefig('plot5.pdf')
+plt.savefig('build/plot5.pdf')

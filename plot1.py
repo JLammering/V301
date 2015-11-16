@@ -28,4 +28,4 @@ plt.xlabel(r'$(I/\mathrm{A})$')
 plt.ylabel(r'$(U_k/\mathrm{V})$')
 plt.grid()
 
-plt.savefig('plot1.pdf')
+plt.savefig('build/plot1.pdf')

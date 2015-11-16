@@ -27,4 +27,4 @@ plt.xlabel(r'$(I/\mathrm{mA})$')
 plt.ylabel(r'$(U_k/\mathrm{V})$')
 plt.grid()
 
-plt.savefig('plot3a.pdf')
+plt.savefig('build/plot3a.pdf')

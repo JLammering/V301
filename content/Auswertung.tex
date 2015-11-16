@@ -1,5 +1,4 @@
-\input{Praeambel.tex}
-\begin{document}
+
   \section{Auswertung}
   \subsection{Messergebnisse}
 
@@ -16,6 +15,8 @@
   \begin{table}[h]
     \begin{minipage}{0.45\textwidth}
     \centering
+    \caption{Messwerte von Schaltung 1}
+    \label{tab:U1}
     \begin{tabular}{S S}
       \toprule
       $U_k/\si{\V}$ & $I/\si{\A}$ \\
@@ -32,11 +33,11 @@
       1.26 & 0.028 \\
       \bottomrule
     \end{tabular}
-    \label{tab:U1}
-    \caption{Messwerte von Schaltung 1}
     \end{minipage}\hfill
     \begin{minipage}{0.45\textwidth}
       \centering
+      \caption{Messwerte von Schaltung 2}
+      \label{tab:U2}
       \begin{tabular}{S S}
         \toprule
         $U_k/\si{\V}$ & $I/\si{\A}$ \\
@@ -53,8 +54,6 @@
         1.67 & 0.038 \\
         \bottomrule
       \end{tabular}
-      \label{tab:U2}
-      \caption{Messwerte von Schaltung 2}
     \end{minipage}
   \end{table}
 
@@ -74,9 +73,9 @@
   \newpage
 
   \begin{figure}[h]
-    \includegraphics[width = \textwidth]{plot1.pdf}
-    \label{fig:U1}
+    \includegraphics[width = \textwidth]{build/plot1.pdf}
     \caption{Messwerte und Fehler $U_\text{k,1}(I)$}
+    \label{fig:U1}
   \end{figure}
 
   In dem Graphen \ref{fig:U1} sind die Messwerte der Tabelle
@@ -106,9 +105,9 @@
   \newpage
 
   \begin{figure}[h]
-    \includegraphics[width = \textwidth]{plot2.pdf}
-    \label{fig:U2}
+    \includegraphics[width = \textwidth]{build/plot2.pdf}
     \caption{Messwerte und Fehler $U_\text{k,2}(I)$}
+    \label{fig:U2}
   \end{figure}
 
   In dem Graphen \ref{fig:U2} sind die Messwerte der Tabelle
@@ -148,27 +147,29 @@
   \begin{table}[h]
     \begin{minipage}{0.45\textwidth}
     \centering
-    \begin{tabular}{S S}
-      \toprule
-      $U_k/\si{\V}$ & $I/\si{\milli\A}$ \\
-      \midrule
-      0.165 & 6.4 \\
-      0.215 & 5.5 \\
-      0.275 & 4.3 \\
-      0.318 & 3.5 \\
-      0.341 & 3.0 \\
-      0.361 & 2.6 \\
-      0.378 & 2.3 \\
-      0.393 & 2.1 \\
-      0.403 & 1.9 \\
-      0.412 & 1.7 \\
-      \bottomrule
-    \end{tabular}
-    \label{tab:U3a}
     \caption{Messwerte von Schaltung 1}
+    \label{tab:U3a}
+      \begin{tabular}{S S}
+        \toprule
+        $U_k/\si{\V}$ & $I/\si{\milli\A}$ \\
+        \midrule
+        0.165 & 6.4 \\
+        0.215 & 5.5 \\
+        0.275 & 4.3 \\
+        0.318 & 3.5 \\
+        0.341 & 3.0 \\
+        0.361 & 2.6 \\
+        0.378 & 2.3 \\
+        0.393 & 2.1 \\
+        0.403 & 1.9 \\
+        0.412 & 1.7 \\
+        \bottomrule
+      \end{tabular}
     \end{minipage}\hfill
     \begin{minipage}{0.45\textwidth}
       \centering
+      \caption{Messwerte von Schaltung 2}
+      \label{tab:U3b}
       \begin{tabular}{S S}
         \toprule
         $U_k/\si{\V}$ & $I/\si{\milli\A}$ \\
@@ -185,17 +186,15 @@
         2.10 & 0.37 \\
         \bottomrule
       \end{tabular}
-      \label{tab:U3b}
-      \caption{Messwerte von Schaltung 2}
     \end{minipage}
   \end{table}
 
   \newpage
 
   \begin{figure}[h]
-    \includegraphics[width = \textwidth]{plot3a.pdf}
-    \label{fig:U3a}
+    \includegraphics[width = \textwidth]{build/plot3a.pdf}
     \caption{Messwerte und Fehler $U_\text{k,3a}(I)$}
+    \label{fig:U3a}
   \end{figure}
 
   In dem Graphen \ref{fig:U3a} sind die Messwerte der Tabelle
@@ -221,9 +220,9 @@
   \newpage
 
   \begin{figure}[h]
-    \includegraphics[width = \textwidth]{plot3b.pdf}
-    \label{fig:U3b}
+    \includegraphics[width = \textwidth]{build/plot3b.pdf}
     \caption{Messwerte und Fehler $U_\text{k,3b}(I)$}
+    \label{fig:U3b}
   \end{figure}
 
   In dem Graphen \ref{fig:U3b} sind die Messwerte der Tabelle
@@ -273,11 +272,13 @@
     \cdot \sigma_i^2}
   \end{equation}
   ergibt sich die neue Abweichung
+
   \begin{equation}
     \phi = \sqrt{\frac{\partial(I \cdot R_i)}{\partial I} \cdot \sigma_I^2
     + \frac{\partial(I \cdot R_i)}{\partial R_i} \cdot \sigma_\text{R}^2}
     = 1.8708 \cdot 10^{-6}
   \end{equation}
+
   Die Leerlaufspannung $U_\text{0,0}$ mit systematischem Fehler und der
   resultierenden Abweichung beträgt dann
   \begin{equation}
@@ -294,4 +295,3 @@
   Zudem misst das Voltmeter nur die Potentialdifferenz an dem Außenwiderstand
   $R_A$ und nicht zusätzlich die minimale Spannung am Amperemeter. Dadurch
   sind die Werte des Innenwiderstandes $R_I$ ebenfalls verfälscht.
-\end{document}
