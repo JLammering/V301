@@ -28,7 +28,7 @@ build/plot5.pdf: plot5.py matplotlibrc header-matplotlib.tex V301Daten1.txt| bui
 
 
 # hier weitere Abhängigkeiten für build/main.pdf deklarieren:
-build/main.pdf: build/plot1.pdf build/plot2.pdf build/plot3a.pdf build/plot3b.pdf build/plot5.pdf content/auswertung.tex content/theorie.tex content/durchfuehrung.tex content/diskussion.tex
+build/main.pdf: build/plot1.pdf build/plot2.pdf build/plot3a.pdf build/plot3b.pdf build/plot5.pdf content/Auswertung.tex content/theorie.tex content/durchfuehrung.tex content/diskussion.tex
 
 build/main.pdf: FORCE | build
 	  TEXINPUTS="$(call translate,build:)" \

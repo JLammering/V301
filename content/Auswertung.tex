@@ -67,6 +67,7 @@
     R_V = \SI{10}{\mega\ohm}
   \end{equation}
   Zur lineare Ausgleichsrechnung wurde die Funktion linregress aus scipy.stats
+  \cite{scipy}
   benutzt. Es wurde jeweils Steigung, Y-Achsen-Abschnitt und die
   Messungenauigkeit zurückgegeben.
 
@@ -117,7 +118,7 @@
   \begin{align}
     m_2 & = \num{5.44 +- 0.06} & b_2 & = 1.47
   \end{align}
-  Da in Schaltung 2 eine Gegenspannung, die in etwa $\SI{2}{\V}$ größer als
+  Da in Schaltung \ref{fig:Schaltung2} eine Gegenspannung, die in etwa $\SI{2}{\V}$ größer als
   $U_0$ ist, mit eingebaut wurde, fließt der Strom in umgekehrte Richtung.
   Die Klemmenspannung ist daher
   \begin{equation}
@@ -147,7 +148,7 @@
   \begin{table}[h]
     \begin{minipage}{0.45\textwidth}
     \centering
-    \caption{Messwerte von Schaltung 1}
+    \caption{Messwerte von Schaltung \ref{fig:Schaltung1}}
     \label{tab:U3a}
       \begin{tabular}{S S}
         \toprule
@@ -168,7 +169,7 @@
     \end{minipage}\hfill
     \begin{minipage}{0.45\textwidth}
       \centering
-      \caption{Messwerte von Schaltung 2}
+      \caption{Messwerte von Schaltung \ref{fig:Schaltung2}}
       \label{tab:U3b}
       \begin{tabular}{S S}
         \toprule
@@ -217,8 +218,6 @@
     R_\text{i,3a} = -m_\text{3a} \si{\ohm} = \SI{0.196 +- 0.005}{\ohm}.
   \end{equation}
 
-  \newpage
-
   \begin{figure}[h]
     \includegraphics[width = \textwidth]{build/plot3b.pdf}
     \caption{Messwerte und Fehler $U_\text{k,3b}(I)$}
@@ -245,8 +244,6 @@
   \begin{equation}
     R_\text{i,3b} = -m_\text{3b} \si{\ohm} = \SI{-621(6)e2}{\ohm}.
   \end{equation}
-
-  \newpage
 
   Bei der Messung der Leerlaufspannung $U_0$ mit einem hochohmigen Voltmeter
   wurde der Vorteil ausgenutzt, dass bei einer niedrige Stromstärke die
@@ -285,7 +282,7 @@
     U_\text{0,0} = \SI{1400000(2)e-6}{\V}.
   \end{equation}
 
-  Wenn man in der Schaltung 1 das Voltmeter an die Stelle H
+  Wenn man in der Schaltung \ref{fig:Schaltung1} das Voltmeter an die Stelle H
   setzen würde, würden die Messwerte der Klemmenspannung $U_k$ und der
   Stromstärke $I$ verfälscht werden. Das Voltmeter hat zwar einen großen
   Widerstand $R_V = \SI{10}{\mega\ohm}$, aber dennoch fließt ein kleiner Strom

@@ -1,4 +1,50 @@
 \section{Theorie}
 \label{sec:Theorie}
 
-Aus der Anleitung\cite{anleitung} entnehme ich das und das
+Eine Spannungsquelle ist ein elektrisches Bauteil, dass über einen Zeitraum, der endlich ist,
+eine konstante Leistung liefert.
+
+Die Spannung, die an den Ausgängen der Spannungsquelle abgegriffen wird, wird
+mit Klemmenspannung $U_\text{K}$ bezeichnet. Wenn kein Strom entnommen wird, bezeichnet
+man sie mit Leerlaufspannung $U_\text{0}$. Sobald nun aber ein Stromverbraucher
+angeschlossen wird, sinkt $U_K$ auf einen Wert unterhalb $U_\text{0}$ nach der Gleichung
+\eqref{eqn:Klemmenspannung}.
+
+\begin{equation}
+  U_\text{K}(I) = U_\text{0} - I \cdot R_\text{i}
+  \label{eqn:Klemmenspannung}
+\end{equation}
+
+Jede Spannungsquelle besitzt einen Innenwiderstand $R_\text{i}$, der bewirkt, dass
+ihr keine unendliche Leistung entnommen werden kann.
+
+\begin{equation}
+  N = I^2 \cdot R_\text{a}
+  \label{eqn:Leistung}
+\end{equation}
+
+Mit Gleichung \eqref{eqn:Leistung} kann die Leistung $N$ in Abhängigkeit von der Stromstärke $I$
+und dem äußeren Widerstand $R_\text{a}$ berechnet werden.
+
+Wenn man nun aber Gleichung
+\eqref{eqn:Klemmenspannung} nach $I$ umformt und in \eqref{eqn:Leistung} einsetzt
+zeigt sich, dass die Leistung nur noch von $R_\text{a}$ abhängt nach Gleichung
+\eqref{eqn:Leistungmitra}.
+
+\begin{equation}
+  N = \frac{(U_\text{0})^2}{(R_\text{i} + R_\text{a})^2} \cdot R_\text{a}
+  \label{eqn:Leistungmitra}
+\end{equation}
+
+Diese Funktion $N(R_\text{a})$ duchläuft ein Maximum, wie sich in Abbildung
+\ref{fig:U5} zeigt. An dieser Stelle spricht man von Leistungsanpassung.
+
+Außerdem muss noch erwähnt werden, dass der Innenwiderstand bei elektrischen
+Generatoren durch Gleichung \eqref{eqn:Innenwiderstand} ausgedrückt wird.
+
+\begin{equation}
+  R_\text{i} = \frac{\text{d}U_\text{K}}{\text{d}I}
+  \label{eqn:Innenwiderstand}
+\end{equation}
+
+\newpage
