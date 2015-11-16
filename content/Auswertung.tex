@@ -58,6 +58,15 @@
     \end{minipage}
   \end{table}
 
+  Bei der ersten Messung der Leerlaufspannung der Monozelle betrug die
+  gemessene Klemmenspannung
+  \begin{equation}
+    U_\text{k,0} = \SI{1.40(6)}{\V}.
+  \end{equation}
+  Der Eingangswiderstand $R_V$ des Voltmeters ist
+  \begin{equation}
+    R_V = \SI{10}{\mega\ohm}
+  \end{equation}
   Zur lineare Ausgleichsrechnung wurde die Funktion linregress aus scipy.stats
   benutzt. Es wurde jeweils Steigung, Y-Achsen-Abschnitt und die
   Messungenauigkeit zurückgegeben.
@@ -176,7 +185,7 @@
         2.10 & 0.37 \\
         \bottomrule
       \end{tabular}
-      \label{tab:U3a)}
+      \label{tab:U3b}
       \caption{Messwerte von Schaltung 2}
     \end{minipage}
   \end{table}
@@ -239,6 +248,41 @@
   \end{equation}
 
   \newpage
+
+  Bei der Messung der Leerlaufspannung $U_0$ mit einem hochohmigen Voltmeter
+  wurde der Vorteil ausgenutzt, dass bei einer niedrige Stromstärke die
+  gemessene Klemmenspanung $U_k$ etwa der Leerlaufspannung entspricht, da
+  der Anteil des Innenwiderstandes nahe Null ist.
+  Es existiert dennoch ein geringer Fehler, der im Folgenden bestimmt wird.
+  Mit
+  \begin{equation}
+    I = \frac{U_\text{k,0}}{R_V} = \SI{1.40(6)e-7}{\A}
+  \end{equation}
+  und dem in \ref{fig:U1} bestimmten Innenwiderstand
+  \begin{equation}
+    R_\text{i,1} = \SI{0.196 +- 0.005}{\ohm}
+  \end{equation}
+  ergibt sich der systematische Fehler ohne Abweichung mit der Formel
+  \begin{equation}
+    U_\text{0,0} - U_\text{k,0} = I \cdot R_i = \num{0.2744e-7} \si{\V}
+  \end{equation}
+  Für die Bestimmung der Abweichung muss die Messfehlerfortpflanzung
+  beachtet werden. Über die Formel zur Gaußschen Fehlerfortpflanzung
+  \begin{equation}
+    \phi = \sqrt{\sum_{i=1}^{N} \biggl(\frac{\partial f}{\partial x_i}\biggr)^2
+    \cdot \sigma_i^2}
+  \end{equation}
+  ergibt sich die neue Abweichung
+  \begin{equation}
+    \phi = \sqrt{\frac{\partial(I \cdot R_i)}{\partial I} \cdot \sigma_I^2
+    + \frac{\partial(I \cdot R_i)}{\partial R_i} \cdot \sigma_\text{R}^2}
+    = 1.8708 \cdot 10^{-6}
+  \end{equation}
+  Die Leerlaufspannung $U_\text{0,0}$ mit systematischem Fehler und der
+  resultierenden Abweichung beträgt dann
+  \begin{equation}
+    U_\text{0,0} = \SI{1400000(2)e-6}{\V}.
+  \end{equation}
 
   Wenn man in der Schaltung 1 das Voltmeter an die Stelle H
   setzen würde, würden die Messwerte der Klemmenspannung $U_k$ und der
