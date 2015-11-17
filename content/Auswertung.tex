@@ -271,24 +271,18 @@
   ergibt sich die neue Abweichung
 
   \begin{equation}
-    \phi = \sqrt{\frac{\partial(I \cdot R_i)}{\partial I} \cdot \sigma_I^2
-    + \frac{\partial(I \cdot R_i)}{\partial R_i} \cdot \sigma_\text{R}^2}
-    = 1.8708 \cdot 10^{-6}
+    \phi = \sqrt{\biggl(\frac{\partial(I \cdot R_i)}{\partial I}\biggr)^2
+    \cdot \sigma_I^2
+    + \biggl(\frac{\partial(I \cdot R_i)}{\partial R_i}\biggr)^2
+    \cdot \sigma_\text{R}^2}
+    = 2.65 \cdot 10^{-4}
   \end{equation}
 
   Die Leerlaufspannung $U_\text{0,0}$ mit systematischem Fehler und der
   resultierenden Abweichung beträgt dann
   \begin{equation}
-    U_\text{0,0} = \SI{1400000(2)e-6}{\V}.
+    U_\text{0,0} = \SI{14000(3)e-4}{\V}.
   \end{equation}
 
-  Wenn man in der Schaltung \ref{fig:Schaltung1} das Voltmeter an die Stelle H
-  setzen würde, würden die Messwerte der Klemmenspannung $U_k$ und der
-  Stromstärke $I$ verfälscht werden. Das Voltmeter hat zwar einen großen
-  Widerstand $R_V = \SI{10}{\mega\ohm}$, aber dennoch fließt ein kleiner Strom
-  über diesen Pfad. Das Amperemeter würde also die Summe aus dem
-  Klemmen-Strom $I_k$ und dem Voltmeter-Strom $I_V$ messen und nicht einfach
-  nur den gesuchten Klemmen-Strom $I_k$.
-  Zudem misst das Voltmeter nur die Potentialdifferenz an dem Außenwiderstand
-  $R_A$ und nicht zusätzlich die minimale Spannung am Amperemeter. Dadurch
-  sind die Werte des Innenwiderstandes $R_I$ ebenfalls verfälscht.
+
+  \newpage
