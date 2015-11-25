@@ -5,10 +5,10 @@ Eine Spannungsquelle ist ein elektrisches Bauteil, dass über einen Zeitraum, de
 eine konstante Leistung liefert.
 
 Die Spannung, die an den Ausgängen der Spannungsquelle abgegriffen wird, wird
-mit Klemmenspannung $U_\text{K}$ bezeichnet. Wenn kein Strom entnommen wird, bezeichnet
-man sie mit Leerlaufspannung $U_\text{0}$. Sobald nun aber ein Stromverbraucher
+als Klemmenspannung $U_\text{K}$ bezeichnet. Wenn kein Stromverbraucher angeschlossen ist, wird
+sie Leerlaufspannung $U_\text{0}$ genannt. Sobald nun aber einer
 angeschlossen wird, sinkt $U_K$ auf einen Wert unterhalb $U_\text{0}$ nach der Gleichung
-\eqref{eqn:Klemmenspannung}.
+\eqref{eqn:Klemmenspannung} ab.
 
 \begin{equation}
   U_\text{K}(I) = U_\text{0} - I \cdot R_\text{i}
@@ -26,8 +26,8 @@ ihr keine unendliche Leistung entnommen werden kann.
 Mit Gleichung \eqref{eqn:Leistung} kann die Leistung $N$ in Abhängigkeit von der Stromstärke $I$
 und dem äußeren Widerstand $R_\text{a}$ berechnet werden.
 
-Wenn man nun aber Gleichung
-\eqref{eqn:Klemmenspannung} nach $I$ umformt und in \eqref{eqn:Leistung} einsetzt
+Wenn nun aber Gleichung
+\eqref{eqn:Klemmenspannung} nach $I$ umgeformt wird und in \eqref{eqn:Leistung} eingesetzt wird
 zeigt sich, dass die Leistung nur noch von $R_\text{a}$ abhängt nach Gleichung
 \eqref{eqn:Leistungmitra}.
 
@@ -37,10 +37,15 @@ zeigt sich, dass die Leistung nur noch von $R_\text{a}$ abhängt nach Gleichung
 \end{equation}
 
 Diese Funktion $N(R_\text{a})$ duchläuft ein Maximum, wie sich in Abbildung
-\ref{fig:U5} zeigt. An dieser Stelle spricht man von Leistungsanpassung.
+\ref{fig:U5} zeigt. An dieser Stelle wird von Leistungsanpassung gesprochen.
 
 Außerdem muss noch erwähnt werden, dass der Innenwiderstand bei elektrischen
-Generatoren durch Gleichung \eqref{eqn:Innenwiderstand} ausgedrückt wird.
+Generatoren nicht zwangsläufig vom Gleichstromwiderstand allein abhängt. Hier
+wird die Gleichung \eqref{eqn:Innenwiderstand} genutzt, die den Innenwiderstand
+differentiell ausdrückt.
+
+Dies ist bei allen Spannungsquellen nötig, dessen Spannungs-Strom-Kennlinie
+nicht linear ist; wenn also der das Verhältnis $\frac{U}{I}$ nicht konstant ist.
 
 \begin{equation}
   R_\text{i} = \frac{\text{d}U_\text{K}}{\text{d}I}
