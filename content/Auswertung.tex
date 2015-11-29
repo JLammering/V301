@@ -1,5 +1,5 @@
+  \newpage
   \section{Auswertung}
-  \subsection{Messergebnisse}
 
   In den Tabellen \ref{tab:Uteins} und \ref{tab:Utzwei} sind jeweils
   Klemmenspannung $U_k$ und Stromstärke $I$
@@ -355,3 +355,7 @@
   \begin{equation}
     N(R_A) = \frac{U_0^2 \cdot R_A}{(R_i + R_A)^2}.
   \end{equation}
+
+  Da die Messwerte für $U$ und $I$ fehlerbehaftet sind, pflanzt sich der
+  Fehler bei Multiplikation und Division fort. Mit Hilfe der Funktion
+  $unumpy$ aus $uncertainties$ werden die neuen Fehlerbalken bestimmt.
