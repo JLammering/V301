@@ -17,7 +17,7 @@ plt.errorbar(x, y, xerr = errX, yerr = 0.06, fmt = 'kx', label = r'$Messwerte \,
 # Lineare Regression:
 slope, intercept, r_value, p_value, std_err = linregress(x, y)
 a = np.linspace(0.03, 0.35)
-plt.plot(a, slope*a + intercept, 'r-', label = r'$linregress$')
+plt.plot(a, slope*a + intercept, 'r-', label = r'$Ausgleichsgerade$')
 
 # Ausgabe:
 print(linregress(x, y))

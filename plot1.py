@@ -14,18 +14,22 @@ y, x = np.genfromtxt('V301Daten1.txt', unpack = True)
 errX = (0.03, 0.003, 0.003, 0.003, 0.003, 0.003, 0.003, 0.003, 0.003)
 plt.errorbar(x, y, xerr = errX, yerr = 0.06, fmt = 'kx', label = r'$Messwerte \, und \, Fehlerbalken$')
 
+k = 0.230
+l = 0.60
+plt.errorbar(k, l, xerr = 0.03, yerr = 0.06, fmt = 'kx')
+
 # Lineare Regression:
 slope, intercept, r_value, p_value, std_err = linregress(x, y)
-a = np.linspace(0.02, 0.15)
-plt.plot(a, slope*a + intercept, 'r-', label = r'$linregress$')
+a = np.linspace(0.02, 0.25)
+plt.plot(a, slope*a + intercept, 'r-', label = r'$Ausgleichsgerade$')
 
 # Ausgabe:
-print(linregress(y, x))
+print(linregress(x, y))
 
 plt.legend(loc = 'best')
-plt.xlim(0.02, 0.15)
+plt.xlim(0.02, 0.25)
 plt.xlabel(r'$(I/\mathrm{A})$')
 plt.ylabel(r'$(U_k/\mathrm{V})$')
 plt.grid()
 
-plt.savefig('build/plot1.pdf')
+plt.savefig('plot1.pdf')
