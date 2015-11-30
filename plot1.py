@@ -24,7 +24,7 @@ a = np.linspace(0.02, 0.25)
 plt.plot(a, slope*a + intercept, 'r-', label = r'$Ausgleichsgerade$')
 
 # Ausgabe:
-print(linregress(x, y))
+print('plot1: ', linregress(x, y))
 
 plt.legend(loc = 'best')
 plt.xlim(0.02, 0.25)

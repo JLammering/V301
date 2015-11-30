@@ -20,7 +20,7 @@ a = np.linspace(0.03, 0.35)
 plt.plot(a, slope*a + intercept, 'r-', label = r'$Ausgleichsgerade$')
 
 # Ausgabe:
-print(linregress(x, y))
+print('linregress plot2:' ,linregress(x, y))
 
 plt.legend(loc = 'best')
 plt.xlim(0.03, 0.35)

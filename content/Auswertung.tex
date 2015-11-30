@@ -113,7 +113,7 @@
 
   \begin{figure}[h]
     \centering
-    \includegraphics[width = \textwidth]{plot2.pdf}
+    \includegraphics[width = \textwidth]{build/plot2.pdf}
     \caption{Messwerte und Fehler, Monozelle mit Gegenspannung, $U_\text{k,2}(I)$}
     \label{fig:Uzwei}
   \end{figure}
@@ -124,7 +124,7 @@
   Bei der Ausgleichungsrechnung werden folgene Werte zurückgegeben:
 
   \begin{align}
-    m_2 & = \num{5.44 +- 0.06} & b_2 & = 1.47
+    m_2 & = \SI{5.44(6)}{\V\per\A} & b_2 & = \SI{1.47}{\V}
   \end{align}
 
   Da in Schaltung 2 eine Gegenspannung, die in etwa $\SI{2}{\V}$ größer als
@@ -138,13 +138,13 @@
   Für Schaltung 2 ergeben sich dann Leerlaufspannung
 
   \begin{equation}
-    U_\text{0,2} = b_2 \si{\V} = \SI{1.47}{\V}
+    U_\text{0,2} = b_2 = \SI{1.47}{\V}
   \end{equation}
 
   und Innenwiderstand
 
   \begin{equation}
-    R_\text{i,2} = m_2 \si{\ohm} = \SI{5.44 +- 0.06}{\ohm}.
+    R_\text{i,2} = m_2 = \SI{5.44 +- 0.06}{\ohm}.
   \end{equation}
 
   In den Tabellen \ref{tab:Utdreia} und \ref{tab:Utdreib} sind jeweils
@@ -202,17 +202,18 @@
 
   \begin{figure}[h]
     \centering
-    \includegraphics[width = \textwidth]{plot3a.pdf}
+    \includegraphics[width = \textwidth]{build/plot3a.pdf}
     \caption{Messwerte und Fehler, Rechtecks-Ausgang, $U_\text{k,3a}(I)$}
     \label{fig:Udreia}
   \end{figure}
+
+\FloatBarrier
 
   In dem Graphen von Abbildung \ref{fig:Udreia} sind die Messwerte der Tabelle
   \ref{tab:Utdreia} und ihre lineare Regression
   $U_\text{k,3a}(I)$ aufgetragen.
   Folgende Werte werden bei der Ausgleichsrechnung ausgegeben:
 
-\FloatBarrier
 
   \begin{align}
     m_\text{3a} & = \SI{-0.0522(5)}{\V\per\A} & b_\text{3a} & = \SI{0.5001}{\V}
@@ -238,7 +239,7 @@
 
   \begin{figure}[h]
     \centering
-    \includegraphics[width = \textwidth]{plot3b.pdf}
+    \includegraphics[width = \textwidth]{build/plot3b.pdf}
     \caption{Messwerte und Fehler, Sinus-Ausgang $U_\text{k,3b}(I)$}
     \label{fig:Udreib}
   \end{figure}
@@ -250,7 +251,7 @@
   \si{\milli\A} in \si{\A}):
 
   \begin{align}
-    m_\text{3b} & = \num{-0.621(6)} & b_\text{3b} & = 2.333
+    m_\text{3b} & = \SI{-0.621(6)}{\V\per\A} & b_\text{3b} & = \SI{2.333}{\V}
   \end{align}
 
   Mit
@@ -262,13 +263,13 @@
   für die erste Schaltung ist
 
   \begin{equation}
-    U_\text{0,3b} = b_\text{3b} \si{\V} = \SI{2.333}{\V}
+    U_\text{0,3b} = b_\text{3b} = \SI{2.333}{\V}
   \end{equation}
 
   und
 
   \begin{equation}
-    R_\text{i,3b} = -m_\text{3b} \si{\ohm} = \SI{-0.621(6)}{\ohm}.
+    R_\text{i,3b} = -m_\text{3b} = \SI{-0.621(6)}{\ohm}.
   \end{equation}
 
   Bei der Messung der Leerlaufspannung $U_0$ mit einem hochohmigen Voltmeter
@@ -347,4 +348,4 @@
 
   Da die Messwerte für $U$ und $I$ fehlerbehaftet sind, pflanzt sich der
   Fehler bei Multiplikation und Division fort. Mit Hilfe der Funktion
-  $unumpy$ aus $uncertainties$ werden die neuen Fehlerbalken bestimmt.
+  $unumpy$ aus $uncertainties$ \cite{uncertainties} werden die neuen Fehlerbalken bestimmt.

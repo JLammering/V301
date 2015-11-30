@@ -26,6 +26,8 @@ x = u/x
 errX = (1, 0.8, 1, 2, 2, 3, 4, 5, 5)
 errY = (0.02, 0.006, 0.005, 0.005, 0.004, 0.004, 0.004, 0.004, 0.004)
 plt.errorbar(x, y, xerr = errX, yerr = errY, fmt = 'kx', label = r'$Messwerte \, und \, Fehlerbalken$')
+plt.ylabel(r'$(U \cdot I / \si{\watt})$')
+plt.xlabel(r'$((U/I) / \si{\Omega})$')
 
 plt.legend(loc = 'best')
 plt.grid()
