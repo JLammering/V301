@@ -69,14 +69,13 @@
   \end{equation}
 
   Zur lineare Ausgleichsrechnung wird die Funktion $linregress$ aus $scipy.stats$
+  \cite{scipy}
   benutzt. Dabei wird jeweils Steigung, Y-Achsen-Abschnitt und die
   Messungenauigkeit zurückgegeben.
 
-  \newpage
-
   \begin{figure}[h]
     \centering
-    \includegraphics[width = \textwidth]{plot1.pdf}
+    \includegraphics[width = \textwidth]{build/plot1.pdf}
     \caption{Messwerte und Fehler, Monozelle,  $U_\text{k,1}(I)$}
     \label{fig:Ueins}
   \end{figure}
@@ -111,8 +110,6 @@
   \begin{equation}
     R_\text{i,1} = -m_1 = \SI{5.1(1)}{\ohm}.
   \end{equation}
-
-  \newpage
 
   \begin{figure}[h]
     \centering
@@ -149,8 +146,6 @@
   \begin{equation}
     R_\text{i,2} = m_2 \si{\ohm} = \SI{5.44 +- 0.06}{\ohm}.
   \end{equation}
-
-  \newpage
 
   In den Tabellen \ref{tab:Utdreia} und \ref{tab:Utdreib} sind jeweils
   Klemmenspannung $U_K$ und Stromstärke $I$
@@ -205,8 +200,6 @@
     \end{minipage}
   \end{table}
 
-  \newpage
-
   \begin{figure}[h]
     \centering
     \includegraphics[width = \textwidth]{plot3a.pdf}
@@ -218,6 +211,8 @@
   \ref{tab:Utdreia} und ihre lineare Regression
   $U_\text{k,3a}(I)$ aufgetragen.
   Folgende Werte werden bei der Ausgleichsrechnung ausgegeben:
+
+\FloatBarrier
 
   \begin{align}
     m_\text{3a} & = \SI{-0.0522(5)}{\V\per\A} & b_\text{3a} & = \SI{0.5001}{\V}
@@ -240,8 +235,6 @@
   \begin{equation}
     R_\text{i,3a} = -m_\text{3a} = \SI{0.0522(5)}{\ohm}.
   \end{equation}
-
-  \newpage
 
   \begin{figure}[h]
     \centering
@@ -277,8 +270,6 @@
   \begin{equation}
     R_\text{i,3b} = -m_\text{3b} \si{\ohm} = \SI{-0.621(6)}{\ohm}.
   \end{equation}
-
-  \newpage
 
   Bei der Messung der Leerlaufspannung $U_0$ mit einem hochohmigen Voltmeter
   wurde der Vorteil ausgenutzt, dass bei einer niedrige Stromstärke die
@@ -327,8 +318,6 @@
   \begin{equation}
     U_\text{0,0} = \SI{7.1(3)e-7}{\V}.
   \end{equation}
-
-  \newpage
 
   \begin{figure}[h]
     \includegraphics[width = \textwidth]{build/plot5.pdf}
